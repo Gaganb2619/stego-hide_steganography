@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>StegoHide</h1>
+            <p>By SirvTech Software Solutions</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#concept">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#encode">Encode</a></li>
+                <li><a href="#decode">Decode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero" class="hero">
+
+        <div class="hero-content">
+            <h2>Hide Your Messages Securely in Images</h2>
+            <p>StegoHide allows you to encrypt text messages inside images, ensuring privacy and security. This is Based on Steganography  which is widely ised in Cybersecurity!</p>
+            <a href="#encode" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+  
+    <section id="encode" class="section">
+        <h2>Encode Message</h2>
+        <input type="file" id="imageUpload" accept="image/*">
+        <textarea id="message" placeholder="Enter your message"></textarea>
+        <button id="encodeButton">Encode Message</button>
+        <canvas id="canvas" style="display: none;"></canvas>
+    </section>
+
+    <section id="decode" class="section">
+        <h2>Decode Message</h2>
+        <input type="file" id="decodeImageUpload" accept="image/*">
+        <button id="decodeButton">Decode Message</button>
+        <textarea id="decodedMessage" readonly placeholder="Decoded message will appear here"></textarea>
+    </section>
+   
+    
+    <section id="concept" class="section">
+        <h2>What is Steganography?</h2>
+        <div class="concept-content">
+            <div class="concept-text">
+                <p>
+                    Steganography is the art and science of hiding secret messages in a way that prevents detection. Unlike encryption, where the message is altered to appear unintelligible, steganography involves embedding the message within a seemingly harmless medium—such as an image, audio file, or video. This ensures that the message remains concealed, even when intercepted.
+                </p>
+                <p>
+                    In digital steganography, data is hidden in the pixel values of an image or audio file, ensuring that the changes are imperceptible to the human eye or ear. It is a powerful tool for ensuring privacy and security in the digital world.
+                </p>
+            </div>
+            <div class="concept-image">
+                <img src="2-72.png" alt="Steganography Concept" class="concept-img">
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="about" class="section">
+        <h2>About StegoHide</h2>
+        <p>
+            StegoHide is a web-based application that allows users to hide confidential messages inside images, ensuring privacy and security. It offers an easy-to-use interface to encode messages into images and decode them back, all while preserving the integrity of the image itself.
+        </p>
+    </section>
+    <br>
+    <br>
+    
+    <section id="features" class="section">
+        <h2>Features</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Encode Messages</h3>
+                <p>Convert any text message into a hidden form inside an image. The message remains safe and hidden in plain sight.</p>
+            </div>
+            <div class="feature">
+                <h3>Decode Messages</h3>
+                <p>Easily extract hidden messages from encoded images. The decoded message will be displayed instantly.</p>
+            </div>
+            <div class="feature">
+                <h3>Automatic Download</h3>
+                <p>Once the message is encoded into the image, the modified image is automatically available for download.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 StegoHide | All Rights Reserved | Powered By SirvTech Software Solutions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

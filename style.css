@@ -1,0 +1,491 @@
+/* style.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #020202;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2703c6;
+    color: white;
+    padding: 10px 30px;
+    box-shadow: 0 4px 6px rgba(27, 5, 195, 0.1);
+}
+
+header .logo h1 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to right, #180daf, #2980b9);
+    color: white;
+    margin-top: 1px;
+    padding: 100px 0px;
+    max-width: 100%;
+    text-align: center;
+}
+
+#hero .hero-content h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#hero .hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#hero .cta-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#hero .cta-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Section Style */
+.section {
+    /* padding: 50px 20px; */
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Section Styling */
+section {
+    padding: 80px 20px; /* Add top and bottom padding for spacing */
+    margin: 40px auto; /* Center sections with margin */
+    max-width:  100%; /* Limit the width for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Deep shadow for a floating effect */
+    background: #ffffff; /* Default white background */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+section:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Colorful gradient background */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-left: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+#about h2 {
+    font-size: 40px; /* Larger font size for the title */
+    font-weight: 600;
+    color: #fff; /* White title color */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect for title */
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #dcdcdc; /* Light gray color for the text */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Soft glowing text */
+}
+
+/* Features Section */
+#features {
+    background: radial-gradient(circle, rgba(3, 35, 138, 0.1) 0%, rgba(3, 8, 141, 0.8) 100%);
+    color: #333;
+    max-width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 40px;
+    color: #2ac108;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(202, 215, 59, 0.7); /* Neon glow effect */
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature {
+    background: #fbf9f9;
+    border-radius: 10px;
+    padding: 40px 30px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 15px 30px rgba(207, 2, 2, 0.2); /* Soft shadow */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.feature:hover {
+    transform: translateY(-10px); /* Hover effect to lift the box */
+    box-shadow: 0 20px 40px rgba(226, 14, 14, 0.3); /* Neon glow on hover */
+}
+
+.feature h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Feature Card Animations */
+.feature::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: rgba(0, 206, 209, 0.1);
+    z-index: -1;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.feature:hover::after {
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: rgba(0, 206, 209, 0.2); /* Larger neon glow effect */
+}
+
+/* Optional: Add a glowing animation to the page */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px rgba(0, 209, 35, 0.7), 0 0 30px rgba(0, 206, 209, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(236, 63, 227, 0.9), 0 0 40px rgba(0, 206, 209, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 206, 209, 0.7), 0 0 30px rgba(0, 206, 209, 0.6);
+    }
+}
+
+h1, h2, h3, p {
+    animation: glow 1.5s ease-in-out infinite alternate; /* Apply glowing animation */
+}
+
+
+ /* Main Section container to hold both Encode and Decode */
+ .section-container {
+  display: flex; 
+   justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+} 
+
+/* Specific Styling for Encode and Decode Sections */
+#encode, #decode {
+    flex: 1 1 48%; /* Each section takes 48% of the container's width */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    min-width: 300px; /* Ensure they don't shrink too much */
+}
+
+#encode:hover, #decode:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Input and Button Styling */
+#encode input, #decode input, #encode textarea, #decode textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+#encode input[type="file"], #decode input[type="file"] {
+    width: auto;
+}
+
+#encode textarea, #decode textarea {
+    min-height: 150px;
+    resize: vertical;
+    max-width: 100%;
+}
+
+/* Button Styling */
+button {
+    background-color: #2575fc;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a11cb;
+    transform: translateY(-5px); /* Button lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column; /* Stack sections on smaller screens */
+        gap: 20px;
+    }
+
+    #encode, #decode {
+        flex: 1 1 100%; /* Full width for each section on small screens */
+    }
+}
+
+.section {
+    /* display: flex; */
+    justify-content: space-between;
+    gap: 2px;
+    flex-wrap: wrap; /* Allows responsiveness on smaller screens */
+}
+
+/* Specific Styling for Encode and Decode Sections */
+#encode, #decode {
+    flex: 1; /* Makes both sections take equal space */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Stylish background */
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Floating effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    text-align: center;
+}
+
+#encode:hover, #decode:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Input and Button Styling */
+#encode input, #decode input, #encode textarea, #decode textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+#encode input[type="file"], #decode input[type="file"] {
+    width: auto;
+}
+
+#encode textarea, #decode textarea {
+    min-height: 150px;
+    resize: vertical;
+    max-width: 100%;
+}
+
+/* Button Styling */
+button {
+    background-color: #2575fc;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a11cb; /* Button hover color */
+    transform: translateY(-5px); /* Button lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Stack sections on smaller screens */
+        gap: 20px;
+    }
+    
+    #encode, #decode {
+        flex: 1 1 100%; /* Full width for each section on small screens */
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Concept Section */
+#concept {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Concept Content (Text + Image) */
+.concept-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow for responsiveness */
+    margin-top: 20px;
+}
+
+/* Concept Text */
+.concept-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.concept-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Concept Image */
+.concept-image {
+    flex: 1;
+    max-width: 45%;
+    text-align: center;
+}
+
+.concept-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Maximum width */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.concept-img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .concept-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .concept-text {
+        max-width: 100%;
+    }
+
+    .concept-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
